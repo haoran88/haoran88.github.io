@@ -1,61 +1,237 @@
-
 <!DOCTYPE html>
-<html>
-<hr/>
-<p>
+<html lang="zh-CN" translate="no">
 
-<ul>
+<script>
+    window.bookmark = {};
+    window.bookmark.custom = {
+        'htmlTitle': '网站大全',
+        'title': '网站搜索',
+        'showAll': true,
+    };
+    window.bookmark.dataList = {};
+    // window.bookmark.dataList['xxxxx'] = xxxxx;
+    // window.bookmark.dataList['xxxxx'] = 'xxxxx';
+    // window.bookmark.dataList['default'] = 'xxxxx';
+    window.bookmark.dataList['default'] = '[{"class":"搜索类网站","urls":[{"name":"百度一下","url":"https://www.baidu.com/","key":["baidu","搜索sousuo"]},{"name":"Google","url":"https://www.google.com/","key":["谷歌","搜索sousuo"]},{"name":"Bing","url":"https://cn.bing.com/","key":["微软bing","搜索sousuo"]},{"name":"csdn博客","url":"https://blog.csdn.net/","key":["搜索"]},{"name":"稀土掘金","url":"https://juejin.cn/","key":["juejin","博客搜索"]},{"name":"博客园","url":"https://www.cnblogs.com/","key":["bokeyuan","博客搜索"]},{"name":"简书","url":"https://www.jianshu.com/","key":["jianshu","博客搜索"]}]},{"class":"开发类官网","urls":[{"name":"Maven依赖","url":"https://mvnrepository.com/","key":["mvnrepository","jar包","java依赖"]},{"name":"Maven官网","url":"https://maven.apache.org/","key":["依赖"]},{"name":"GitHub","url":"https://github.com/","key":["代码托管平台"]},{"name":"Gitee","url":"https://gitee.com/","key":["代码daima","代码托管平台","GitHub"]},{"name":"GitLab","url":"https://gitlab.cn/","key":["代码托管平台"]},{"name":"MyBatis-Plus","url":"https://baomidou.com/","key":["baomidou"]},{"name":"Arthas","url":"https://arthas.aliyun.com/doc/commands.html","key":["阿尔萨斯","java"]},{"name":"ElementUI","url":"https://element.eleme.cn/#/zh-CN/component/installation","key":["前端框架"]},{"name":"Vue2","url":"https://v2.cn.vuejs.org/v2/guide/index.html","key":["前端框架"]},{"name":"Vue2","url":"https://cn.vuejs.org/guide/introduction.html","key":["前端框架"]},{"name":"Node.js","url":"https://nodejs.org/zh-cn/","key":["node"]},{"name":"Bootstrap","url":"https://v3.bootcss.com/","key":["前端框架"]},{"name":"Echarts","url":"https://echarts.apache.org/zh/index.html","key":["图表"]},{"name":"Hutool","url":"https://hutool.cn/docs/#/","key":["工具类"]},{"name":"LeetCode","url":"https://leetcode.cn/","key":["刷算法题","suanfa"]},{"name":"牛客nowcoder","url":"https://www.nowcoder.com/exam/oj","key":["刷算法题","suanfa"]},{"name":"菜鸟教程","url":"https://www.runoob.com/","key":["runoob"]},{"name":"w3school","url":"https://www.w3school.com.cn/","key":["教程"]},{"name":"w3cschool","url":"https://www.w3cschool.cn/tutorial","key":["教程"]}]},{"class":"工具类网站","urls":[{"name":"百度翻译","url":"https://fanyi.baidu.com/","key":["baidufanyi"]},{"name":"Google翻译","url":"https://translate.google.com/","key":["谷歌翻译","gugefanyi"]},{"name":"有道翻译","url":"https://fanyi.youdao.com/","key":["youdaofanyi"]},{"name":"Google地图","url":"https://www.google.com/maps","key":["谷歌地图","ditu"]},{"name":"百度地图","url":"https://map.baidu.com/","key":["ditu","map"]},{"name":"Gmail","url":"https://www.google.com/intl/zh-CN_cn/gmail/about/","key":["谷歌邮箱","google邮箱","youxiang"]},{"name":"163网易免费邮","url":"https://mail.163.com/","key":["youxiang","网易邮箱"]},{"name":"QQ邮箱","url":"https://mail.qq.com/","key":["youxiang","腾讯邮箱"]},{"name":"Base64在线编码解码","url":"https://base64.us/","key":["base64"]},{"name":"AES加密","url":"http://www.jsons.cn/aesencrypt/","key":["AES加密解密","对称加密解密","jiamijiemi"]},{"name":"JSON - BeJson","url":"https://www.bejson.com/","key":["校验jiaoyan","格式化geshihua"]},{"name":"JSON - sojson","url":"https://www.sojson.com/","key":["校验jiaoyan","格式化geshihua"]},{"name":"JSON在线编辑器-BeJSON.com","url":"https://www.bejson.com/jsoneditoronline/","key":["json bianji"]},{"name":"JSON在线视图查看器(Online JSON Viewer)","url":"https://www.bejson.com/jsonviewernew","key":["json查看"]}]},{"class":"娱乐类网站","urls":[{"name":"哔哩哔哩","url":"https://www.bilibili.com/","key":["bilibili","B站","看视频kanshipin"]},{"name":"哔哩哔哩 - 搜索","url":"https://search.bilibili.com/","key":["bilibili","B站","看视频kanshipin"]},{"name":"哔哩哔哩 - 排行榜","url":"https://www.bilibili.com/v/popular/rank/all","key":["bilibili","B站","看视频kanshipin"]},{"name":"YouTube","url":"https://www.youtube.com/","key":["优兔","看视频kanshipin"]},{"name":"爱奇艺","url":"https://www.iqiyi.com/","key":["aiqiyi","看电影kandianying","看视频kanshipin"]},{"name":"腾讯视频","url":"https://v.qq.com/","key":["tenxunshipin","看电影kandianying","看视频kanshipin"]},{"name":"虎牙","url":"https://www.huya.com/l","key":["huya","看直播kanzhibo"]},{"name":"斗鱼","url":"https://www.douyu.com/directory/all","key":["douyu","看直播kanzhibo"]}]}]';
+</script>
 
-<li><a href="http://oa.yxcc.com" target="_blank">公司OA</a></li>
-<li><a href="http://www.mail.163.com" target="_blank">163邮箱</a></li>
-<li><a href="http://www.baidu.com" target="_blank">百度</a></li>
-</ul>
+<head>
+    <title>网址导航</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="google" content="notranslate">
+    <base target="_blank">
 
-</p>
+    <!-- 字节跳动静态资源公共库：https://cdn.bytedance.com/ -->
+    <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-<hr/>
-<table border="1"
-cellpadding="15">
-<tr>
-<td><a href="http://oa.yxcc.com" target="_blank">公司OA<a/></td>
-<td><a href="http://mail.yxcc.com" target="_blank">公司邮箱<a/></td>
-<td><a href="http://www.mail.163.com" target="_blank">163邮箱<a/></td>
-<td><a href="http://www.baidu.com" target="_blank">百度<a/></td>
-</tr>
-</table>
-<hr/>
-<table border="1"
-cellpadding="15">
-<tr>
-<td><a href="https://www.python.org/" target="_blank">Python官网<a/></td>
-<td><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#vlfd" target="_blank">python库下载<a/></td>
-<td><a href="http://bbs.fishc.com/forum-173-1.html" target="_blank">小甲鱼python<a/></td>
-<td><a href="http://python.jobbole.com/" target="_blank">伯乐在线<a/></td>
-<td><a href="http://www.oschina.net/" target="_blank">开源中国<a/></td>
-<td><a href="http://github.com/" target="_blank">Github<a/></td>
-<td><a href="https://github.com/vinta/awesome-python/" target="_blank">awesome-python<a/></td>
-<td><a href="https://github.com/jobbole/awesome-python-cn" target="_blank">awesome-python中文版<a/></td>
-<td><a href="http://note.youdao.com/" target="_blank">有道云笔记<a/></td>
-<td><a href="http://naotu.baidu.com/" target="_blank">百度脑图<a/></td>
- <td><a href="http://www.icourse163.org/" target="_blank">中国大学MOOK<a/></td>
-</tr>
-</table>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            font-family: Arial, "Microsoft YaHei";
+            box-sizing: border-box;
+            min-width: 360px;
+            max-width: 800px;
+        }
 
-<hr/>
-<table border="1"
-cellpadding="15">
-<tr>
-<td><a href="https://mega.nz/" target="_blank">MEGA网盘<a/></td>
-<td><a href="http://www.52pojie.cn/" target="_blank">我爱破解论坛<a/></td>
-<td><a href="http://www.vibsos.com/explore/" target="_blank">振乎论坛<a/></td>
- <td><a href="http://www.33cm.net/" target="_blank">33厘米机械故障<a/></td>
- <td><a href="http://www.appinn.com/" target="_blank">小众软件<a/></td>
- <td><a href="http://www.iopq.net/" target="_blank">藏宝湾单机网游论坛<a/></td>
- <td><a href="http://hr.bjx.com.cn/" target="_blank">北极星电力招聘<a/></td>
- 
-</tr>
-</table>
+        #app {
+            margin: 0;
+            padding: 20px 20px 70px 20px;
+            box-sizing: border-box;
+        }
 
+        #app a {
+            line-height: 24px;
+            text-decoration: none;
+        }
+
+        #app a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        input {
+            margin: 10px 0 10px 0;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        h3 {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+        <div v-if="pageLoad == 1">
+            <h2 v-if="title" @click="clear()" style="cursor: pointer;">{{title}}</h2>
+            <!-- 搜索框 及 搜索结果 -->
+            <div id="searchPart">
+                <input type="text" name="" id="sss" @input="goSearch(userInput)" v-model="userInput"
+                    placeholder="输入关键字搜索" autofocus="autofocus">
+                <div v-if="search.length" v-for="item in search" style="padding-left: 6px;">
+                    <a :href="item.url">{{item.name}}</a>
+                </div>
+            </div>
+            <!-- 全部书签展示 -->
+            <div v-if="showAll" id="allPart">
+                <hr style="margin: 10px 0;">
+                <div v-for="ccc in dataList">
+                    <h3>{{ccc.class}}</h3>
+                    <div v-for="urlItem in ccc.urls">
+                        <a :href="urlItem.url">
+                            {{urlItem.name}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div v-if="pageLoad == 2">
+            <div>无内容，请输入存在的name</div>
+            <div style="margin-top: 10px;">
+                <a id="defaultname" href="" target="_self">前往default页面</a>
+            </div>
+        </div>
+        <div v-if="pageLoad == 3">
+            <div>正在加载...</div>
+        </div>
+        <div v-if="pageLoad == 4">
+            <div>服务器正在维护...</div>
+        </div>
+
+    </div>
+</body>
+
+<!-- Vue部分 -->
+<script>
+    let app = new Vue({
+        el: '#app',
+        data: {
+            pageLoad: 3,
+            userInput: "",  // 搜索框输入
+            title: "",
+            showAll: true,  // 是否展示全量内容
+            search: [],  // 搜索结果
+            dataList: [],  // 全量内容
+        },
+        created() {
+            this.init();
+        },
+        mounted() {
+        },
+        methods: {
+            init() {
+                let url = new URL(location.href);
+                let name = url.searchParams.get("name");
+                if (name == null || name == "") {
+                    // window.location.href = location.origin + location.pathname + "?name=demo";
+                    let localName = window.localStorage.getItem("name");
+                    if (localName == null || localName == "") {
+                        window.location.href = location.origin + location.pathname + "?name=default";
+                    } else {
+                        window.location.href = location.origin + location.pathname + "?name=" + localName;
+                    }
+                } else {
+                    this.readData(name);
+                }
+            },
+            readData(name) {
+                let itemList = window.bookmark.dataList[name];
+                if (!itemList) {
+                    jQuery("a#defaultname").attr('href', location.origin + location.pathname + "?name=default");
+                    this.pageLoad = 2;
+                    return;
+                }
+                if (typeof itemList == 'string') {
+                    itemList = JSON.parse(itemList);
+                }
+                document.title = window.bookmark.custom.htmlTitle;
+                this.title = window.bookmark.custom.title;
+                this.showAll = window.bookmark.custom.showAll;
+                this.dataList = itemList;
+                this.pageLoad = 1;
+                window.localStorage.setItem("name", name);
+            },
+            goSearch(input) {
+                input = input.replace(RegExp(" ", "g"), "").toLowerCase();  // 去空格 转小写
+                // console.log("用户输入：", input);
+                this.search = [];
+                if (input.length == 0) { return; }
+                for (let i in this.dataList) {
+                    let urls = this.dataList[i].urls;
+                    for (let j in urls) {
+                        if (test(input, urls[j].name)) {
+                            // console.log("name命中：", urls[j].name);
+                            this.search.push(urls[j]);
+                            continue;  // 命中name直接 continue
+                        }
+                        let keys = urls[j].key;
+                        if (keys.length < 1) {
+                            continue;  // key数组为空
+                        }
+                        for (let k in keys) {
+                            // console.log(input, keys[k]);
+                            if (test(input, keys[k])) {
+                                // console.log(urls[j]);
+                                this.search.push(urls[j]);
+                                break;  // 命中一个key就可以退出了(退出最近的一层for循环)
+                            }
+                        }
+                    }
+                }
+            },
+            clear() {
+                this.userInput = "";
+                this.search = [];
+                jQuery("#sss").focus();
+            },
+        },
+    });
+</script>
+
+<!-- 搜索规则 -->
+<script>
+    function test(input, keyword) {
+        // input = input.toLowerCase();  // 转小写
+        keyword = keyword.toLowerCase();  // 转小写
+        // console.log("test方法：", input, keyword);
+        if (input.length > keyword.length) {
+            return false;
+        }
+        if (input.length == keyword.length) {
+            return input == keyword;
+        }
+        let keywordIndex = 0;
+        for (let inputChar of input) {
+            let index = keyword.indexOf(inputChar, keywordIndex);
+            if (index < 0) {
+                return false;
+            }
+            keywordIndex = index + 1;
+        }
+        return true;
+    }
+</script>
+
+<script>
+    // {"name":"标题","url":"xxxxx","key":["xxx"]},
+</script>
 
 </html>
+
